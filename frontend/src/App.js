@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import "./App.css";
+require('dotenv').config()
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD1cwAMYAH2_TFqcpAPBaXObqh8MlbEsQI",
+  apiKey: process.env.FirebaseAPI,
   authDomain: "sp-cds.firebaseapp.com",
   projectId: "sp-cds",
   storageBucket: "sp-cds.firebasestorage.app",
